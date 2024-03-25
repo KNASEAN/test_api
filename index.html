@@ -60,19 +60,19 @@
         
         $(document).ready(function () {
             console.log("@")
-            
+            console.log(env.liffId)
             initializeLiff();
         })
 
         function initializeLiff() {
             liff.init({
-                liffId: liffId
+                liffId: env.liffId
             }).then(() => {
                // POSTリクエストを送信
                const idToken = liff.getIDToken();
                const profile = liff.getProfile();
                const userId = profile.userId;               
-                fetch(url, {
+                fetch(env.appurl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
