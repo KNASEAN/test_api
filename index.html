@@ -72,6 +72,7 @@
                const idToken = liff.getIDToken();
                const profile = liff.getProfile();
                const userId = profile.userId;    
+               console.log(idToken,profile,userId)
                const appurl=env.appurl           
                 fetch(appurl, {
                     method: 'POST',
