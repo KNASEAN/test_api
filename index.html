@@ -71,8 +71,9 @@
                // POSTリクエストを送信
                const idToken = liff.getIDToken();
                const profile = liff.getProfile();
-               const userId = profile.userId;               
-                fetch(env.appurl, {
+               const userId = profile.userId;    
+               const appurl=env.appurl           
+                fetch(appurl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
