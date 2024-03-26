@@ -58,7 +58,7 @@
                // POSTリクエストを送信
                
                const idToken = liff.getIDToken();
-               const userId = liff.getProfile().then(profile=>profile.userId);
+               const userId =getUerId()
                alert(userId)
                const appurl=env.appurl           
                 fetch(appurl, {
@@ -82,6 +82,15 @@
                 alert(err)
                 console.log('LIFF Initialization failed ', err);
             });
+        }
+
+        async function getUerId() {
+            try {
+                const profile = await liff.getProfile();
+                return profile.userId
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
         }
 
         function sendText(text) {
