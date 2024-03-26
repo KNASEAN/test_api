@@ -24,7 +24,7 @@
     <div class="col-12">
         <div class="card border-info mb-4">
             <div class="card-body text-info">
-                <h5 class="card-title">SET TITLE11</h5>
+                <h5 class="card-title">SET TITLE12</h5>
                 <p class="card-text">TSHI IS DESCRIPTION AREA1.YOU CAN KEEP INFORMATION</p>
                 <p class="card-text">TSHI IS DESCRIPTION AREA2.YOU CAN KEEP INFORMATION</p>
             </div>
@@ -58,8 +58,7 @@
                // POSTリクエストを送信
                
                const idToken = liff.getIDToken();
-               const profile = liff.getProfile();
-               const userId = profile.userId;  
+               const userId = liff.getProfile().then(profile=>profile.userId);
                alert(userId)
                const appurl=env.appurl           
                 fetch(appurl, {
