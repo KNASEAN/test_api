@@ -11,3 +11,9 @@ git config user.email [メールアドレス]
 ```
 
 KNASEAN
+
+# [how to post to gas webapp](https://qiita.com/khidaka/items/ebf770591100b1eb0eff)
+
+```
+"Content-Type" : "application/x-www-form-urlencoded",
+```
