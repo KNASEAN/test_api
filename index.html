@@ -56,10 +56,11 @@
                 liffId: env.liffId
             }).then(() => { //Auth
                // POSTリクエストを送信
-               alert("3")
+               
                const idToken = liff.getIDToken();
                const profile = liff.getProfile();
-               const userId = profile.userId;    
+               const userId = profile.userId;  
+               alert(profile)
                console.log(idToken,profile,userId)
                const appurl=env.appurl           
                 fetch(appurl, {
