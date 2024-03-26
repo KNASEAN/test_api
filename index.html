@@ -75,10 +75,8 @@
                console.log(idToken,profile,userId)
                const appurl=env.appurl           
                 fetch(appurl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
+                    method: "POST",
+                    'Content-Type': 'application/x-www-form-urlencoded',
                     body: JSON.stringify({ idToken: idToken ,userId:userId})
                 })
                 .then(response => response.text())
