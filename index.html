@@ -47,14 +47,17 @@
     <script src="contents.js"></script>
     <script>   
         $(document).ready(function () {
+            alert("1")
             initializeLiff();
         })
 
         function initializeLiff() {
+            alert("2")
             liff.init({
                 liffId: env.liffId
             }).then(() => { //Auth
                // POSTリクエストを送信
+               alert("3")
                const idToken = liff.getIDToken();
                const profile = liff.getProfile();
                const userId = profile.userId;    
