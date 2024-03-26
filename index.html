@@ -47,12 +47,11 @@
     <script src="contents.js"></script>
     <script>   
         $(document).ready(function () {
-            alert("1")
             initializeLiff();
         })
 
         function initializeLiff() {
-            alert("2")
+            alert(env.liffId)
             liff.init({
                 liffId: env.liffId
             }).then(() => { //Auth
@@ -79,6 +78,7 @@
                 });
                 
             }).catch((err) => {
+                alert(err)
                 console.log('LIFF Initialization failed ', err);
             });
         }
