@@ -24,7 +24,7 @@
     <div class="col-12">
         <div class="card border-info mb-4">
             <div class="card-body text-info">
-                <h5 class="card-title">SET TITLE13</h5>
+                <h5 class="card-title">SET TITLE14</h5>
                 <p class="card-text">TSHI IS DESCRIPTION AREA1.YOU CAN KEEP INFORMATION</p>
                 <p class="card-text">TSHI IS DESCRIPTION AREA2.YOU CAN KEEP INFORMATION</p>
             </div>
@@ -87,6 +87,7 @@
         async function getUerId() {
             try {
                 const profile = await liff.getProfile();
+                alert(profile.userId)
                 return profile.userId
             } catch (error) {
                 console.error('Error fetching data:', error);
