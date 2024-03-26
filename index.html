@@ -61,7 +61,6 @@
                const profile = liff.getProfile();
                const userId = profile.userId;  
                alert(idToken)
-               console.log(idToken,profile,userId)
                const appurl=env.appurl           
                 fetch(appurl, {
                     method: "POST",
@@ -73,6 +72,7 @@
                     body: JSON.stringify({ idToken: idToken ,userId:userId})
                 })
                 .then(response => { //Show Data
+                    alert(response)
                     response.text()
                     })
                 .catch(error => {
