@@ -16,4 +16,5 @@ KNASEAN
 
 ```
 "Content-Type" : "application/x-www-form-urlencoded",
+"mode"       : "no-cors",
 ```
