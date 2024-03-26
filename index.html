@@ -72,7 +72,7 @@
                     body: JSON.stringify({ idToken: idToken ,userId:userId})
                 })
                 .then(response => { //Show Data
-                    alert(response)
+                    alert(response.text())
                     response.text()
                     })
                 .catch(error => {
