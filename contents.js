@@ -2,7 +2,8 @@
     //contingency constants
     const env={
         liffId : "1657309677-Q0Y7E841",
-        appurl : "https://script.google.com/macros/s/AKfycbwb6dZz27uUUqP_3gpYo22IveOfliplzppwZ_1DpZHbP5AHbjoQlk8YoW-YAJCnNtY/exec",
+        appurl : "https://script.google.com/macros/s/AKfycbwcPtkxRG8aJmtPnWL1ipuGsFV7ziWLrAqJnVR4FEETca92O-0kf6uQdR8zX18itIKX/exec",
+        type_key:"test"
     }
 
     //create table from array
