@@ -76,7 +76,10 @@
                const appurl=env.appurl           
                 fetch(appurl, {
                     method: "POST",
-                    'Content-Type': 'application/x-www-form-urlencoded',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    
                     body: JSON.stringify({ idToken: idToken ,userId:userId})
                 })
                 .then(response => response.text())
