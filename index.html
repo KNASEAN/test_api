@@ -58,8 +58,6 @@
                // POSTリクエストを送信
                
                const idToken = liff.getIDToken();
-               const userId =getUerId()
-               alert(userId)
                const appurl=env.appurl           
                 fetch(appurl, {
                     method: "POST",
@@ -68,7 +66,7 @@
                         'Content-Type': 'application/x-www-form-urlencoded'
                     },
                     
-                    body: JSON.stringify({ idToken: idToken ,userId:userId,typeKey:env.type_key})
+                    body: JSON.stringify({ idToken: idToken ,typeKey:env.type_key})
                 })
                 .then(response => { //Show Data
                     alert(response.text())
@@ -82,16 +80,6 @@
                 alert(err)
                 console.log('LIFF Initialization failed ', err);
             });
-        }
-
-        async function getUerId() {
-            try {
-                const profile = await liff.getProfile();
-                alert(profile.userId)
-                return profile.userId
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
         }
 
         function sendText(text) {
