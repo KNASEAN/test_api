@@ -2,7 +2,7 @@
     //contingency constants
     const env={
         liffId : "1657309677-Q0Y7E841",
-        appurl : "https://script.google.com/macros/s/AKfycbzV63oFuWHcOCkz-Erz_DWKJn7SrTqywDWyAgOjSDSGbe6nJdYGswDNUzaGLvb6Yntr/exec",
+        appurl : "https://script.google.com/macros/s/AKfycbzaxiI9OX2qcl1FK6XXngsq1uyQunUe_qwFi0NIOIUEPA0Kt6olOLWwmehsLkzlJoAT/exec",
         type_key:"test"
     }
 
