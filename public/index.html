@@ -73,11 +73,11 @@
                     response.text()
                     })
                 .catch(error => {
-                    console.error('Error:', error);
+                    console.log('Error:', error);
                 });
                 
             }).catch((err) => {
-                alert(err)
+                alert("err")
                 console.log('LIFF Initialization failed ', err);
             });
         }
@@ -85,6 +85,7 @@
         function sendText(text) {
             liff.sendMessages([{
                 'type': 'text',
+                
                 'text': text
             }]).then(function () {
                 liff.closeWindow();
