@@ -69,14 +69,11 @@
                     
                     body: JSON.stringify({ idToken: idToken ,typeKey:env.type_key})
                 })
-                .then(response => { //Show Data
-                    if(response.rejected){
-                        alert("?")
-                    }else{
-                        alert(response.text())
-                        console.log("response",response.text())
-                        response.text()
-                    }
+                .then(response => response.json())
+                .then(jsondata => { //Show Data
+                    alert(jsondata)
+                    console.log("response",jsondata)
+                    
                 })
                 .catch(error => {
                     alert("?")
