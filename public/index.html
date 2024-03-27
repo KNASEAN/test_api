@@ -24,7 +24,7 @@
     <div class="col-12">
         <div class="card border-info mb-4">
             <div class="card-body text-info">
-                <h5 class="card-title">SET TITLE17</h5>
+                <h5 class="card-title">SET TITLE18</h5>
                 <p class="card-text">TSHI IS DESCRIPTION AREA1.YOU CAN KEEP INFORMATION</p>
                 <p class="card-text">TSHI IS DESCRIPTION AREA2.YOU CAN KEEP INFORMATION</p>
             </div>
@@ -58,8 +58,9 @@
                // POSTリクエストを送信
                
                const idToken = liff.getIDToken();
-               const appurl=env.appurl           
-                fetch(appurl, {
+               const appurl=env.appurl 
+
+               fetch(appurl, {
                     method: "POST",
                     mode: "no-cors",
                     headers: {
@@ -73,6 +74,7 @@
                     response.text()
                     })
                 .catch(error => {
+                    alert("?")
                     console.log('Error:', error);
                 });
                 
