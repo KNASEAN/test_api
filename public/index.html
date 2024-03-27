@@ -69,14 +69,18 @@
                     
                     body: JSON.stringify({ idToken: idToken ,typeKey:env.type_key})
                 })
-                .then(response => { //Show Data
-                    var jsondata =response.json()
-                    alert(jsondata)
-                    console.log("response",jsondata)
-                    
+                .then(response => {
+                    // JSONデータを取得するためのPromiseを解決する
+                    return response.json();
+                })
+                .then(jsondata => {
+                    // JSONデータを処理する
+                    alert(jsondata);
+                    console.log("response", jsondata);
                 })
                 .catch(error => {
-                    alert("?")
+                    // エラーハンドリング
+                    alert("?");
                     console.log('Error:', error);
                 });
                 
