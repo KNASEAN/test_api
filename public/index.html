@@ -70,10 +70,14 @@
                     body: JSON.stringify({ idToken: idToken ,typeKey:env.type_key})
                 })
                 .then(response => { //Show Data
-                    alert(response.text())
-                    console.log("response",response.text())
-                    response.text()
-                    })
+                    if(!response.ok){
+                        alert("?")
+                    }else{
+                        alert(response.text())
+                        console.log("response",response.text())
+                        response.text()
+                    }
+                })
                 .catch(error => {
                     alert("?")
                     console.log('Error:', error);
