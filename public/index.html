@@ -70,7 +70,7 @@
                     body: JSON.stringify({ idToken: idToken ,typeKey:env.type_key})
                 })
                 .then(response => { //Show Data
-                    if(!response.ok){
+                    if(response.rejected){
                         alert("?")
                     }else{
                         alert(response.text())
