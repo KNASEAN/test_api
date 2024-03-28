@@ -76,7 +76,7 @@
                 .then(jsondata => {
                     // Deal JSON
                     alert(jsondata["user_info"]);
-                    console.log("response", jsondata);
+                    console.log("response : %o", jsondata["user_info"]);
                 })
                 .catch(error => {
                     // Error hundling
