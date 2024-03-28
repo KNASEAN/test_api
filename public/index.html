@@ -70,22 +70,22 @@
                     body: JSON.stringify({ idToken: idToken ,typeKey:env.type_key})
                 })
                 .then(response => {
-                    // JSONデータを取得するためのPromiseを解決する
+                    // Resolve a Promise to get JSON data
                     return response.json();
                 })
                 .then(jsondata => {
-                    // JSONデータを処理する
-                    alert(jsondata);
+                    // Deal JSON
+                    alert(jsondata["user_info"]);
                     console.log("response", jsondata);
                 })
                 .catch(error => {
-                    // エラーハンドリング
+                    // Error hundling
                     alert("?");
                     console.log('Error:', error);
                 });
                 
             }).catch((err) => {
-                alert("err")
+                alert("error2")
                 console.log('LIFF Initialization failed ', err);
             });
         }
